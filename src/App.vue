@@ -50,7 +50,7 @@ export default {
   methods:{
     updateMap : function(){
       axios
-      .get("http://api.openweathermap.org/data/2.5/weather?q="+this.cityName+"&?units=metric&APPID=ceaabd1441aec5eb12417e86fc7f7b4f")
+      .get("https://api.openweathermap.org/data/2.5/weather?q="+this.cityName+"&?units=metric&APPID=ceaabd1441aec5eb12417e86fc7f7b4f")
       .then(response => {
         this.currentTemp = response.data.main.temp;
           this.minTemp = response.data.main.temp_min;
@@ -75,7 +75,7 @@ export default {
       .then(response => {
         this.currentTemp = response.data.main.temp;
           this.minTemp = response.data.main.temp_min;
-          this.maxTemp = response.data.main.temp_max;
+          this.maxTemp = response.data.main.gtemp_max;
           this.pressure = response.data.main.pressure;
           this.humidity = response.data.main.humidity + '%';
           this.wind = response.data.wind.speed + 'm/s';

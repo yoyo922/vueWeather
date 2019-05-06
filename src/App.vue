@@ -69,7 +69,7 @@ export default {
      });
     }
   },
-  created: function(cityName){
+  created: function(){
       axios
       .get("http://api.openweathermap.org/data/2.5/weather?q=Guelph&?units=metric&APPID=ceaabd1441aec5eb12417e86fc7f7b4f")
       .then(response => {

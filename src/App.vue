@@ -28,6 +28,7 @@
 </template>
 
 <script>
+/* eslint-disable no-console */
 import axios from 'axios'
 
 export default {
